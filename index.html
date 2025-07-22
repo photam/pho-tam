@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Phở Tâm Gia Truyền</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🍜 Phở Tâm Gia Truyền</h1>
+    <div id="banner">
+      <img src="images/banner-pho.jpg" alt="Phở Tâm Gia Truyền" />
+    </div>
+    <nav>
+      <a href="#menu">Thực Đơn</a>
+      <a href="#cart">Giỏ Hàng</a>
+      <a href="#contact">Liên Hệ</a>
+    </nav>
+  </header>
+
+  <section id="intro">
+    <h2>Chào mừng đến với Phở Tâm Gia Truyền!</h2>
+    <p>Chuyên các loại phở truyền thống gia truyền – đậm đà, chuẩn vị Việt.</p>
+  </section>
+
+  <section id="menu">
+    <h2>Thực Đơn</h2>
+
+    <div class="product">
+      <img src="images/pho-bo-tai.png" alt="Phở Bò Tái" />
+      <h3>Phở Bò Tái</h3>
+      <p>50.000đ</p>
+      <button onclick="addToCart('Phở Bò Tái', 50000)">Thêm vào giỏ</button>
+    </div>
+
+    <div class="product">
+      <img src="images/pho-ga.png" alt="Phở Gà" />
+      <h3>Phở Gà</h3>
+      <p>45.000đ</p>
+      <button onclick="addToCart('Phở Gà', 45000)">Thêm vào giỏ</button>
+    </div>
+
+    <div class="product">
+      <img src="images/pho-dac-biet.png" alt="Phở Đặc Biệt" />
+      <h3>Phở Đặc Biệt</h3>
+      <p>70.000đ</p>
+      <button onclick="addToCart('Phở Đặc Biệt', 70000)">Thêm vào giỏ</button>
+    </div>
+
+    <div class="product">
+      <img src="images/pho-sieu-dac-biet.png" alt="Phở Siêu Đặc Biệt" />
+      <h3>Phở Siêu Đặc Biệt</h3>
+      <p>90.000đ</p>
+      <button onclick="addToCart('Phở Siêu Đặc Biệt', 90000)">Thêm vào giỏ</button>
+    </div>
+  </section>
+<section id="cart">
+  <h2>Giỏ Hàng</h2>
+  <div id="cart-items">
+    <p>Chưa có sản phẩm nào trong giỏ.</p>
+  </div>
+  <div id="cart-total" style="font-weight: bold; margin-top: 15px;"></div>
+  <button id="checkout-btn" style="display:none;">Thanh Toán</button>
+</section>
+
+  <section id="contact">
+    <h2>Liên Hệ</h2>
+    <p>Địa chỉ: 123 Phố Street, Hà Nội</p>
+    <p>Hotline: 0394890459</p>
+    <p>Email: lienhe@photamgiatruyen.vn</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Phở Tâm Gia Truyền</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
