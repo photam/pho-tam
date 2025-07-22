@@ -15,7 +15,7 @@
     <nav>
       <a href="#menu">Thực Đơn</a>
       <a href="#cart">Giỏ Hàng</a>
-      <a href="#contact">Liên Hệ</a>
+      <a href="#contact-info">Liên Hệ</a>
     </nav>
   </header>
 
@@ -55,32 +55,32 @@
       <button onclick="addToCart('Phở Siêu Đặc Biệt', 90000)">Thêm vào giỏ</button>
     </div>
   </section>
-<section id="cart">
-  <h2>Giỏ Hàng</h2>
-  <a href="cart.html">Giỏ Hàng</a>
+
+  <section id="cart">
+    <h2>Giỏ Hàng</h2>
+    <a href="cart.html">Giỏ Hàng</a>
     <p>Chưa có sản phẩm nào trong giỏ.</p>
-  </div>
-  <div id="cart-total" style="font-weight: bold; margin-top: 15px;"></div>
-  <button id="checkout-btn" style="display:none;">Thanh Toán</button>
-</section>
-<section id="contact">
-  <h2>Liên Hệ</h2>
-  <form action="https://formspree.io/f/xpwlpzby" method="POST">
-    <label for="name">Tên của bạn:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+    <div id="cart-total" style="font-weight: bold; margin-top: 15px;"></div>
+    <button id="checkout-btn" style="display:none;">Thanh Toán</button>
+  </section>
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+  <section id="contact-form">
+    <h2>Liên Hệ</h2>
+    <form action="https://formspree.io/f/xpwlpzby" method="POST">
+      <label for="name">Tên của bạn:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
 
-    <label for="message">Tin nhắn:</label><br>
-    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
 
-    <button type="submit">Gửi</button>
-  </form>
-</section>
+      <label for="message">Tin nhắn:</label><br>
+      <textarea id="message" name="message" rows="4" required></textarea><br><br>
 
+      <button type="submit">Gửi</button>
+    </form>
+  </section>
 
-  <section id="contact">
+  <section id="contact-info">
     <h2>Liên Hệ</h2>
     <p>Địa chỉ: 123 Phố Street, Hà Nội</p>
     <p>Hotline: 0394890459</p>
