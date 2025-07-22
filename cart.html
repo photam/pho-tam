@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Giỏ Hàng - Phở Tâm Gia Truyền</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .cart-item { border-bottom: 1px solid #ccc; padding: 10px 0; }
+    .total { font-weight: bold; font-size: 18px; margin-top: 20px; }
+    .remove-btn { background: red; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>🛒 Giỏ Hàng</h1>
+  <div id="cart"></div>
+  <div class="total" id="total"></div>
+
+  <form action="https://formspree.io/f/xpwlpzby" method="POST">
+    <input type="hidden" name="order" id="orderData">
+    <input type="text" name="name" placeholder="Tên của bạn" required><br>
+    <input type="text" name="phone" placeholder="Số điện thoại" required><br>
+    <input type="text" name="address" placeholder="Địa chỉ giao hàng" required><br>
+    <button type="submit">Gửi đơn hàng</button>
+  </form>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartDiv = document.getElementById('cart');
+    const totalDiv = document.getElementById('total');
+    const orderInput = document.getElementById('orderData');
+
+    let total = 0;
+    let orderText = '';
+
+    cart.forEach((item, index) => {
+      const div = document.createElement('div');
+      div.className = 'cart-item';
+      div.innerHTML = `
+        <p><strong>${item.name}</strong> - ${item.price.toLocaleString()}đ x ${item.quantity}</p>
+        <button class="remove-btn" onclick="removeItem(${index})">Xóa</button>
+      `;
+      cartDiv.appendChild(div);
+
+      total += item.price * item.quantity;
+      orderText += `${item.name} x ${item.quantity} = ${(item.price * item.quantity).toLocaleString()}đ\n`;
+    });
+
+    totalDiv.innerText = `Tổng cộng: ${total.toLocaleString()}đ`;
+    orderInput.value = orderText;
+
+    function removeItem(index) {
+      cart.splice(index, 1);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      location.reload();
+    }
+  </script>
+</body>
+</html>
