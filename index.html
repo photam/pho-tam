@@ -56,14 +56,32 @@
     </div>
   </section>
 
+
+
   <section id="cart">
-  <h2>
-    <a href="cart.html" class="cart-link">Giỏ Hàng</a>
-  </h2>
+  <h2>Giỏ Hàng</h2>
   <div id="cart-items"></div>
   <div id="cart-total" style="font-weight: bold; margin-top: 15px;"></div>
-  <button id="checkout-btn" style="display:none;">Thanh Toán</button>
+
+  <form id="order-form" action="https://formspree.io/f/xpwlpzby" method="POST" style="margin-top: 20px; display: none;">
+    <input type="hidden" name="order-details" id="order-details" />
+
+    <label for="name">Tên của bạn:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="phone">Số điện thoại:</label><br>
+    <input type="tel" id="phone" name="phone" required><br><br>
+
+    <label for="address">Địa chỉ giao hàng:</label><br>
+    <input type="text" id="address" name="address" required><br><br>
+
+    <button type="submit" style="background-color: #d32f2f; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+      Gửi đơn hàng
+    </button>
+  </form>
 </section>
+
+
 
 
 
