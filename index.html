@@ -8,7 +8,10 @@
 </head>
 <body>
   <header>
-    <h1>🍜 Phở Tâm Gia Truyền</h1>
+    <div class="header-wrapper">
+      <img src="logovip.png" alt="Phở Tâm Logo" class="logo" />
+      <h1>Phở Tâm Gia Truyền</h1>
+    </div>
     <div id="banner">
       <img src="banner-pho.jpg" alt="Phở Tâm Gia Truyền" />
     </div>
@@ -56,34 +59,28 @@
     </div>
   </section>
 
-
-
   <section id="cart">
-  <h2>Giỏ Hàng</h2>
-  <div id="cart-items"></div>
-  <div id="cart-total" style="font-weight: bold; margin-top: 15px;"></div>
+    <h2>Giỏ Hàng</h2>
+    <div id="cart-items"></div>
+    <div id="cart-total" style="font-weight: bold; margin-top: 15px;"></div>
 
-  <form id="order-form" action="https://formspree.io/f/xpwlpzby" method="POST" style="margin-top: 20px; display: none;">
-    <input type="hidden" name="order-details" id="order-details" />
+    <form id="order-form" action="https://formspree.io/f/xpwlpzby" method="POST" style="margin-top: 20px; display: none;">
+      <input type="hidden" name="order-details" id="order-details" />
 
-    <label for="name">Tên của bạn:</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+      <label for="name">Tên của bạn:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
 
-    <label for="phone">Số điện thoại:</label><br>
-    <input type="tel" id="phone" name="phone" required><br><br>
+      <label for="phone">Số điện thoại:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
 
-    <label for="address">Địa chỉ giao hàng:</label><br>
-    <input type="text" id="address" name="address" required><br><br>
+      <label for="address">Địa chỉ giao hàng:</label><br>
+      <input type="text" id="address" name="address" required><br><br>
 
-    <button type="submit" style="background-color: #d32f2f; color: white; border: none; padding: 10px 20px; cursor: pointer;">
-      Gửi đơn hàng
-    </button>
-  </form>
-</section>
-
-
-
-
+      <button type="submit" style="background-color: #d32f2f; color: white; border: none; padding: 10px 20px; cursor: pointer;">
+        Gửi đơn hàng
+      </button>
+    </form>
+  </section>
 
   <section id="contact-form">
     <h2>Liên Hệ</h2>
@@ -113,5 +110,17 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <div id="chat-buttons">
+  <a href="https://zalo.me/0394890459" target="_blank" id="zalo-chat" title="Chat Zalo">
+    <img src="zalo.png" alt="Zalo" />
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61578608612828" target="_blank" id="fb-chat" title="Xem Fanpage Facebook">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+  </a>
+</div>
+
+
+
 </body>
 </html>
