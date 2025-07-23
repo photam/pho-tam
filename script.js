@@ -65,12 +65,11 @@ orderForm.addEventListener('submit', (e) => {
 
   orderDetailsInput.value = orderText;
 
-  // Có thể reset giỏ hàng sau khi gửi
   setTimeout(() => {
     cart = [];
     localStorage.setItem('cart', JSON.stringify(cart));
     renderCart();
-  }, 500); // đợi 0.5s để form gửi đi
+  }, 500);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
