@@ -12,17 +12,25 @@
   </style>
 </head>
 <body>
-  <h1>🛒 Giỏ Hàng</h1>
-  <div id="cart"></div>
-  <div class="total" id="total"></div>
+  <header>
+    <div class="header-wrapper">
+      <img src="logovip.png" alt="Phở Tâm Logo" class="logo" />
+      <h1>Giỏ Hàng - Phở Tâm Gia Truyền</h1>
+    </div>
+  </header>
 
-  <form action="https://formspree.io/f/xpwlpzby" method="POST">
-    <input type="hidden" name="order" id="orderData">
-    <input type="text" name="name" placeholder="Tên của bạn" required><br>
-    <input type="text" name="phone" placeholder="Số điện thoại" required><br>
-    <input type="text" name="address" placeholder="Địa chỉ giao hàng" required><br>
-    <button type="submit">Gửi đơn hàng</button>
-  </form>
+  <section>
+    <div id="cart"></div>
+    <div class="total" id="total"></div>
+
+    <form action="https://formspree.io/f/xpwlpzby" method="POST">
+      <input type="hidden" name="order" id="orderData">
+      <input type="text" name="name" placeholder="Tên của bạn" required><br>
+      <input type="text" name="phone" placeholder="Số điện thoại" required><br>
+      <input type="text" name="address" placeholder="Địa chỉ giao hàng" required><br>
+      <button type="submit">Gửi đơn hàng</button>
+    </form>
+  </section>
 
   <script>
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -55,5 +63,15 @@
       location.reload();
     }
   </script>
+
+  <!-- Nút Chat Zalo và Facebook -->
+  <div id="chat-buttons">
+    <a href="https://zalo.me/0394890459" target="_blank" id="zalo-chat" title="Chat Zalo">
+      <img src="https://stc.zalopay.vn/zlp-website/static/logo-zalo.png" alt="Zalo" />
+    </a>
+    <a href="https://m.me/photamgiatruyen" target="_blank" id="fb-chat" title="Chat Facebook">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook" />
+    </a>
+  </div>
 </body>
 </html>
